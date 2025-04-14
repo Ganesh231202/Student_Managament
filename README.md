@@ -30,67 +30,10 @@ Update existing student
 
 Delete student by ID
 
-6. Code Snippet Example:
-java
-Copy
-Edit
-// Student.java
-public class Student {
-    private int id;
-    private String name;
-    private int age;
-
-    // Constructors, getters, and setters
-    public Student(int id, String name, int age) {
-        this.id = id;
-        this.name = name;
-        this.age = age;
-    }
-    // toString for display
-    public String toString() {
-        return id + " - " + name + " - " + age;
-    }
-}
-java
-Copy
-Edit
-// StudentService.java
-import java.util.*;
-
-public class StudentService {
-    private List<Student> studentList = new ArrayList<>();
-
-    public void addStudent(Student s) {
-        studentList.add(s);
-    }
-
-    public void displayStudents() {
-        for (Student s : studentList) {
-            System.out.println(s);
-        }
-    }
-
-    public void deleteStudent(int id) {
-        studentList.removeIf(s -> s.getId() == id);
-    }
-}
-java
-Copy
-Edit
-// Main.java
-import java.util.Scanner;
-
-public class Main {
-    public static void main(String[] args) {
-        StudentService service = new StudentService();
-        Scanner sc = new Scanner(System.in);
-        // menu options here (add, display, delete)
-    }
-}
-7. Challenges Faced:
+6. Challenges Faced:
 Managing dynamic lists
 
 Handling user input and validation
 
-8. Outcome:
+7. Outcome:
 Successfully developed a functional Java application that manages student records using object-oriented principles.
